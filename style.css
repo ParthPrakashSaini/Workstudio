@@ -1,0 +1,351 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Freight Big Pro";
+}
+
+html,
+body {
+  height: 100%;
+  height: 100%;
+}
+
+.main {
+  background-color: #000;
+}
+
+/* loader */
+.loader {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  /* display: none; */
+}
+
+.yellow1 {
+  height: 100%;
+  width: 100%;
+  background-color: #f5e41c;
+  position: absolute;
+  z-index: 9;
+}
+
+.yellow2 {
+  height: 100%;
+  width: 100%;
+  background-color: #f5e41c;
+  position: absolute;
+  z-index: 7;
+}
+
+.loader h1 {
+  color: white;
+  font-size: 6.7vw;
+  font-weight: 100;
+  line-height: 5vw;
+  /* letter-spacing: 3px; */
+  text-align: center;
+  position: relative;
+  z-index: 8;
+}
+
+.loader video {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  object-fit: cover;
+  z-index: 6;
+}
+
+/* Navigation bar */
+
+.nav {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  padding: 30px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav svg path {
+  fill: #000;
+}
+
+.navrght {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5vw;
+  padding-top: 3px;
+}
+
+.navrght .btns {
+  font-size: 1.2vw;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+
+.nav1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5vw;
+}
+
+#plsicon {
+  background-image: url(icon-nav-plus-black.svg);
+  width: 26px;
+  height: 26px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  user-select: none;
+  outline: none;
+  cursor: pointer;
+  border: none;
+}
+
+/* page1  */
+.page1 {
+  height: 100vh;
+  width: 100%;
+  background-color: #f5e41c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.page1 h1 {
+  font-size: 6.7vw;
+  font-weight: 100;
+  line-height: 5vw;
+  /* letter-spacing: 3px; */
+  text-align: center;
+}
+/* PAGE 2 */
+.page2 {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  color: #ffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.elem {
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+.elem .moving .blur {
+  position: absolute;
+  width: 35%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to right, #f5e31bf0, #f5e41c, #f5e31bf0);
+  box-shadow: 10px 0px 20px 20px #f5e41c, -10px 0px 20px 5px #f5e41c;
+  z-index: 9;
+}
+
+.elem h2 {
+  position: relative;
+  font-size: 6.5vw;
+  font-weight: 300;
+  z-index: 1;
+  line-height: 5vw;
+}
+
+.elem .moving {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -45%) scaleY(0);
+  width: 100%;
+  background-color: #f5e41c;
+  white-space: nowrap;
+  padding: 4px 0;
+  transition: all ease 0.5s;
+  overflow: hidden;
+}
+
+.elem .moving .moving-in {
+  display: inline-block;
+  white-space: nowrap;
+  animation-name: moving;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.elem .moving .moving-in h5 {
+  color: #000;
+  display: inline-block;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  margin-right: 30px;
+  opacity: 0;
+  transition: all ease 0.3s;
+  transition-delay: 0.1s;
+}
+
+@keyframes moving {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.elem:hover .moving {
+  transform: translate(0, -45%) scaleY(1);
+}
+
+.elem:hover .moving h5 {
+  opacity: 1;
+}
+
+.elem:hover h2 {
+  font-style: italic;
+  color: #000;
+}
+
+/* PAGE 3 */
+.page3 {
+  min-height: 100vh;
+  width: 100%;
+  background-color: white;
+}
+
+.image-container {
+  padding: 15px;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.img-div {
+  background-color: red;
+  height: 40vw;
+  width: 30vw;
+  position: relative;
+  overflow: hidden;
+  margin: 25px 20px;
+}
+
+.img-div img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all ease 0.3s;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  background-color: #00000022;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all ease 0.3s;
+  z-index: 9;
+}
+
+.overlay p {
+  color: #ffff;
+  font-size: 3vw;
+  font-weight: 300;
+  line-height: 48px;
+  opacity: 0;
+  transition-delay: 0.1s;
+}
+
+.overlay:hover p {
+  opacity: 1;
+}
+
+.overlay:hover {
+  background-color: #000;
+}
+
+.img-div:hover img {
+  scale: 1.1;
+}
+
+/* FOOTER */
+
+.footer {
+  height: 50vh;
+  width: 100%;
+  background-color: #ffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 40px;
+}
+
+.footer .foot {
+  height: 50%;
+  width: 100%;
+  background-color: #000;
+}
+
+.footer .icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.footer .icon h2 {
+  font-size: 1.2vw;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.footer .foot {
+  padding: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.foot h3 {
+  color: #ffff;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.foot .insta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
